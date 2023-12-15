@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaultofcodes Internships</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .internship {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .internship h3 {
+            margin-bottom: 10px;
+        }
+
+        .internship p {
+            margin-bottom: 10px;
+        }
+
+        .internship button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .contact-form label,
+        .contact-form select,
+        .contact-form textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vaultofcodes Internships</h1>
+    </header>
+
+    <section>
+        <h2>Current Internships</h2>
+
+        <div class="internship">
+            <h3>Web Development Internship</h3>
+            <p>Join us to learn and work on exciting web development projects using HTML, CSS, and JavaScript.</p>
+            <p><strong>Location:</strong> Online</p>
+            <p><strong>Duration:</strong> 2 months</p>
+            <p><strong>Start Date:</strong> Today</p>
+            <button onclick="window.location.href='https://vaultofcodes.com/pages/internships'">Know More</button>
+        </div>
+
+        <div class="internship">
+            <h3>Java Developer Internship</h3>
+            <p>Explore the world of Java development and contribute to real-world projects.</p>
+            <p><strong>Location:</strong> Work from Home</p>
+            <p><strong>Duration:</strong> 1 month</p>
+            <p><strong>Start Date:</strong> Today</p>
+            <button onclick="window.location.href='https://vaultofcodes.com/pages/internships'">Know More</button>
+        </div>
+
+        <div class="internship">
+            <h3>Python Internship</h3>
+            <p>Unlock the power of Python and gain hands-on experience in various Python applications.</p>
+            <p><strong>Location:</strong> Online</p>
+            <p><strong>Duration:</strong> 2 months</p>
+            <p><strong>Start Date:</strong> Today</p>
+            <button onclick="window.location.href='https://vaultofcodes.com/pages/internships'">Know More</button>
+        </div>
+
+        <div class="internship">
+            <h3>Technical Internship</h3>
+            <p>Explore diverse technical domains and work on cutting-edge technologies.</p>
+            <p><strong>Location:</strong> Work from Home</p>
+            <p><strong>Duration:</strong> 1 month</p>
+            <p><strong>Start Date:</strong> Today</p>
+            <button onclick="window.location.href='https://vaultofcodes.com/pages/internships'">Know More</button>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+                <label for="internship">Select Internship:</label>
+                <select id="internship" name="internship">
+                    <option value="web_dev">Web Development Internship</option>
+                    <option value="java_dev">Java Developer Internship</option>
+                    <option value="python_intern">Python Internship</option>
+                    <option value="tech_intern">Technical Internship</option>
+                </select>
+
+                <label for="content">Additional Content:</label>
+                <textarea id="content" name="content" placeholder="Enter your Query" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
