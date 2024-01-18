@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="password"] {
+      position: relative;
+    }
+
+    #password-strength {
+      height: 10px;
+      margin-top: 8px;
+    }
+
+    #password-strength::after {
+      content: "";
+      display: block;
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .weak { background-color: #ff6565; }
+    .medium { background-color: #ffb265; }
+    .strong { background-color: #64ff64; }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    input[type="file"] {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <div id="password-strength"></div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the Terms and Conditions</label>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    document.getElementById('password').addEventListener('input', function () {
+      const strengthIndicator = document.getElementById('password-strength');
+      const password = document.getElementById('password').value;
+      const strength = calculatePasswordStrength(password);
+      
+      strengthIndicator.className = strength;
+    });
+
+    function calculatePasswordStrength(password) {
+      // Implement your password strength logic here
+      // Example: This is a basic implementation. You may want to enhance it.
+      if (password.length < 6) {
+        return 'weak';
+      } else if (password.length < 10) {
+        return 'medium';
+      } else {
+        return 'strong';
+      }
+    }
+  </script>
+</body>
+</html>
